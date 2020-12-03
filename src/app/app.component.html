@@ -1,3 +1,20 @@
 <p>
     This is for testing if this app is working
 </p>
+
+<p appHighlight>Highlight me!</p>
+
+<p [appHighlight]="color">HighLighted in Green </p>
+
+<h2>Pick a highlight</h2>
+
+<div>
+    <input type="radio" name="color" (click)="color='green'">Green
+    <input type="radio" name="color" (click)="color='yellow'">Yellow
+    <input type="radio" name="color" (click)="color='orange'">Orange
+    <input type="radio" name="color" (click)="color=''">None
+</div>
+<p [appHighlight]="color" defaultColor="violet">
+    Highlight me too!
+</p>
+<p appHighlight [defaultColor]="'pink'">This is default Color</p>
